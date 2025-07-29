@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Shop Order Management</h1>
+
+    <div id="login-section">
+      <h2>Employee Login</h2>
+      <input type="text" id="login-id" placeholder="Employee ID" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="order-section" style="display:none;">
+      <h2>Create New Order</h2>
+      <input type="text" id="customer-name" placeholder="Customer Name" />
+      <input type="text" id="customer-address" placeholder="Customer Address" />
+      <select multiple id="items">
+        <optgroup label="Electronics">
+          <option value="Refrigerator">Refrigerator</option>
+          <option value="Washing Machine">Washing Machine</option>
+          <option value="Microwave">Microwave</option>
+          <option value="TV">TV</option>
+        </optgroup>
+        <optgroup label="Furniture">
+          <option value="Chair">Chair</option>
+          <option value="Table">Table</option>
+          <option value="Sofa">Sofa</option>
+          <option value="Dining Table">Dining Table</option>
+          <option value="Dressing Table">Dressing Table</option>
+        </optgroup>
+      </select>
+      <button onclick="placeOrder()">Place Order</button>
+
+      <h2>All Orders</h2>
+      <div id="orders-list"></div>
+      <h2>Search Orders by Item</h2>
+<input type="text" id="search-item-name" placeholder="Enter item name (e.g., TV)" />
+<button onclick="searchOrdersByItem()">Search</button>
+<pre id="search-results"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
